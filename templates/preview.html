@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block content %}
+        <div class="row text-center">
+            <h1>Проверка камеры</h1><br>
+            <div class="flex-container">
+                <div ><canvas id="inputCanvas" width="1280" height="720" ></canvas></div>
+                <div class="flex-container2">
+                    <div class="flex-container">
+                        <div id="place_for_rec"></div>
+                        <button id="StartStopSaveArea">Запись</button>
+                        <button id="ClearArea">Очистить</button>
+                        <button id="clearButton">Clear</button>
+                    </div>
+                    <div id="place_for_table" style="display: inline-block"> </div>
+                </div>
+            </div>
+        </div>
+
+    <form action= "" method="post">
+        {{ form.hidden_tag() }}
+
+        <br/><br/>
+        <p> {{ form.totalObject() }}  {{ form.totalObject.label }}  </p>
+        <p> {{ form.partObject() }}  {{ form.partObject.label }}  </p>
+        <p> {{ form.timePartObject() }}  {{ form.timePartObject.label }}  </p>
+        <p> {{ form.lineObject() }}  {{ form.lineObject.label }}  </p>
+        <p> {{ form.mapTrajectory() }}  {{ form.mapTrajectory.label }}  </p>
+        <div>
+            <p>
+                {{ form.countFrame.label }}<br>
+                {{ form.countFrame() }}
+            </p>
+            <p>
+                {{ form.freqFrame.label }}<br>
+                {{ form.freqFrame() }}
+            </p>
+        </div>
+        <div class="row text-center">
+            <p> {{ form.next_button() }} </p>
+
+        </div>
+    </form>
+{% endblock %}

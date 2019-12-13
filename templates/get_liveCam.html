@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+    {% if images %}
+        <p>Кадр {{ rows }}</p>
+        <img src="{{ url_for('static',filename=images) }}">
+    {% endif %}
+{% endblock %}
+
+
+

@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+<div class="row text-center">
+   <h1>Привет </h1>
+   <p>Нажмите далее, что бы перейти к настройке анализатора</p>
+   <form action= "{{ url_for('camera') }}" method="post">
+        {{ form.hidden_tag() }}
+        <p> {{ form.submit() }} </p>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <form action= "" method="post">
+        {{ form.hidden_tag() }}
+
+        <div class="row text-center">
+            <div class="row text-center">
+                <h1>Выберите вебкамеру</h1>
+                <br><br><br>
+                <div class="flex-container">
+                    <div class="flex-container2">
+                        <img src="{{ url_for('static',filename=images1) }}" width="500"><br>
+                        <p> {{ form.next_button1() }} </p>
+                    </div>
+                    <div class="flex-container2">
+                        <img src="{{ url_for('static',filename=images2) }}" width="500"><br>
+                        <p> {{ form.next_button2() }} </p>
+                    </div>
+                    <div class="flex-container2">
+                        <img src="{{ url_for('static',filename=images3) }}" width="500"> <br>
+                        <p> {{ form.next_button3() }} </p>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </form>
+
+
+{% endblock %}
